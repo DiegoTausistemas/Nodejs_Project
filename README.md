@@ -21,6 +21,7 @@ npm start
 ## Author
 
 👤 **Diego Jiménez Palacios**
+
 👤 **RUT: 17.213.897-7**
 
 * Github: [@DiegoTausistemas](https://github.com/DiegoTausistemas)
