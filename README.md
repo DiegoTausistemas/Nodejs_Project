@@ -23,17 +23,6 @@ npm start
 
 * Github: [@DiegoTausistemas](https://github.com/DiegoTausistemas)
 
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-Feel free to check [issues page](https://github.com/DiegoTausistemas/Nodejs_Project/issues). You can also take a look at the [contributing guide](https://github.com/DiegoTausistemas/Nodejs_Project/blob/master/CONTRIBUTING.md).
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-
 ## 📝 License
 
 Copyright © 2020 [Diego Jiménez Palacios](https://github.com/DiegoTausistemas).
