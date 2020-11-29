@@ -1,0 +1,22 @@
+{
+  "name": "proyect-manager",
+  "version": "1.0.0",
+  "description": "Plataforma de administración de proyectos para cualquier área, departamento y división de su organización.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoTausistemas/Nodejs_Project.git"
+  },
+  "author": "Diego Jiménez Palacios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoTausistemas/Nodejs_Project/issues"
+  },
+  "homepage": "https://github.com/DiegoTausistemas/Nodejs_Project#readme",
+  "dependencies": {
+    "readme-md-generator": "^1.0.0"
+  }
+}
