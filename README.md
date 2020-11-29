@@ -1,7 +1,8 @@
 # Welcome to Project Manager 👋
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 
-> Proyecto final para curso NodeJS Escalab
+> Proyecto final para curso NodeJS Escalab.
+
 > Plataforma de administración de proyectos para cualquier área, departamento y división de su organización.
 
 ### 🏠 [Homepage](https://github.com/DiegoTausistemas/Nodejs_Project#readme)
@@ -22,7 +23,7 @@ npm start
 
 👤 **Diego Jiménez Palacios**
 
-👤 **RUT: 17.213.897-7**
+💳 **RUT: 17.213.897-7**
 
 * Github: [@DiegoTausistemas](https://github.com/DiegoTausistemas)
 
