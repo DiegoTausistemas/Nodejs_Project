@@ -3,7 +3,7 @@
 
 > Proyecto final para curso NodeJS Escalab.
 
-> Plataforma de seguimiento y para incubación de proyectos.
+> Plataforma de postulación y seguimiento de incubación de proyectos.
 
 ### 🏠 [Homepage](https://github.com/DiegoTausistemas/Nodejs_Project#readme)
 
