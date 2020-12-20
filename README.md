@@ -1,19 +1,23 @@
 # Welcome to Project Manager 👋
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 
-> Proyecto final para curso NodeJS Escalab.
+>Proyecto final para curso NodeJS Escalab.
 
-> Plataforma de postulación y seguimiento de incubación de proyectos.
+## Descripción
+Plataforma de postulación y seguimiento de incubación de proyectos
+
+Un usuario realiza el ingreso de un proyecto que busca ser financiado (Incubación). Dicho proyecto pasa a fase de postulación, el cual tras ser aprovado pasa a ser incubado, donde en diferentes etapas se le asigna un presupuesto y metas asociadas hasta su lanzamiento.
+
 
 ### 🏠 [Homepage](https://github.com/DiegoTausistemas/Nodejs_Project#readme)
 
-## Install
+## Instalación
 
 ```sh
 npm install
 ```
 
-## Usage
+## Uso
 
 ```sh
 npm start
@@ -21,9 +25,9 @@ npm start
 
 ## Author
 
-👤 **Diego Jiménez Palacios**
+👤  **Diego Jiménez Palacios**
 
-💳 **RUT: 17.213.897-7**
+💳  **RUT: 17.213.897-7**
 
 * Github: [@DiegoTausistemas](https://github.com/DiegoTausistemas)
 
