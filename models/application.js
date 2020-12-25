@@ -11,16 +11,15 @@ const applicationSchema = new mongoose.Schema(
     condition: {
       type: String,
       default: "En Proceso",
-      enum: ["Aceptado", "Rechazado"]
+      enum: ["En Proceso", "Aceptado", "Rechazado"]
     },
     date_application: {
       date_admission: {
         type: Date,
         require: true,
+        default: Date.now
       },
-      date_answer: {
-        type: Date
-      }
+      updated: Date,
     }
   },
   {

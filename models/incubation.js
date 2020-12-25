@@ -8,9 +8,9 @@ const incubationSchema = new mongoose.Schema(
       type: ObjectId,
       ref: "Project"
     },
-    budget: {
-      type: Number,
-      required: true
+    application: {
+      type: ObjectId,
+      ref: "Application"
     },
     observations: {
       type: String,
@@ -18,7 +18,18 @@ const incubationSchema = new mongoose.Schema(
     },
     date_admission: {
       type: Date
-    }
+    },
+    course: {
+      budget: {
+        type: Number,
+        required: true
+      },
+      stage: {
+        type: String,
+        default: "Checkin",
+        enum: ["Checkin", "Escalamiento", "Piloto", "Prototipo"]
+      }
+    },
   },
   {
     timestamps: true

@@ -14,7 +14,7 @@ const projectSchema = new mongoose.Schema(
     },
     description: {
       type: String,
-      maxlength: 150
+      maxlength: 500
     },
     project_manager: {
       type: ObjectId,
@@ -23,7 +23,7 @@ const projectSchema = new mongoose.Schema(
     area: {
       type: ObjectId,
       ref: "Area"
-    },
+    }
   },
   {
     timestamps: true
