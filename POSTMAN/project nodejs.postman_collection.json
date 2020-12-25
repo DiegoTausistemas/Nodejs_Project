@@ -1,0 +1,677 @@
+{
+	"info": {
+		"_postman_id": "433e7f32-cd4d-4380-919b-4f1325e2ba1e",
+		"name": "project nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstname\": \"Diego\",\n\t\"lastname\": \"Jimenez\",\n\t\"email\": \"diego@gmail.com\",\n    \"hashedpass\":\"12354QWasd\",\n    \"rut\":\"17213156-7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rut\":\"17213156-7\",\n    \"hashedpass\":\"12354QWasd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/signout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg1MTk4MDR9.Sgxu7BlLYrrWg6w9NWy_jEcnv3jytNIjT10cptG9Ao4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/user/consultar/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"consultar",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OGUxZTNjNWQ3Njg1OTQzYzI0YmYiLCJpYXQiOjE2MDc4OTY2MzF9.CgtQGQ_EY8tWG-Uk9bHmPWVhizzj4Opu9S518niROdM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rut\": \"12345678-9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/eliminar/5fd68e1e3c5d7685943c24bf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"eliminar",
+								"5fd68e1e3c5d7685943c24bf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg2MDY3Njd9.iftnkGy9Xoc7XbQBL48kFBX3EVniV5uf0OMToBlGEuA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\" : \"Diego Alejandro\",\n    \"lastname\" : \"Jimenez\",\n    \"email\" : \"diegojimenez@gmail.com\",\n    \"rut\" : \"17213156-7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/actualizar/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"actualizar",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get projects by user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg1MTYxMTl9.MZhi_cd1K3Bj9iEdzxxPgmkTzk5t6ESQ1sKhh1ve8bs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/proyecto/consultar/usuario/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proyecto",
+								"consultar",
+								"usuario",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "area",
+			"item": [
+				{
+					"name": "create area",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg0OTE1MzJ9.yMT0R-Y5MyR72uuDQ9W7BFrwLTdvl1MNEpmkqs-oCvI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"name\": \"Informática\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/area/ingresar/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"area",
+								"ingresar",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get areas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/area/consultar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"area",
+								"consultar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update area",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg1MTAxODV9.0eTCN54da9reGYzzKVzYHkC-1p7M1zzLrctqJ-LfcFU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Investigación y desarrollo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/area/actualizar/5fdfa2328e40be8638fddc8c/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"area",
+								"actualizar",
+								"5fdfa2328e40be8638fddc8c",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete area",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmNjZTllOTAwMDhmNTFlNDAzYjZiMDgiLCJpYXQiOjE2MDcyODcyMDh9.bvIo6HaQZ7y9ASM8BxoDdAlC6yX0WW8kC3kZ9-b1UWs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/area/eliminar/5fcd318404d6122f2eec0254/5fcce9e90008f51e403b6b08",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"area",
+								"eliminar",
+								"5fcd318404d6122f2eec0254",
+								"5fcce9e90008f51e403b6b08"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project",
+			"item": [
+				{
+					"name": "create project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg1MTYxMTl9.MZhi_cd1K3Bj9iEdzxxPgmkTzk5t6ESQ1sKhh1ve8bs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Proyecto 1\",\n    \"description\": \"Este es un resumen del proyecto 1\",\n    \"project_manager\": \"5fd69d2344624e882d352275\",\n    \"area\": \"5fdfa2408e40be8638fddc8d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/proyecto/ingresar/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proyecto",
+								"ingresar",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get projects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg1MTYxMTl9.MZhi_cd1K3Bj9iEdzxxPgmkTzk5t6ESQ1sKhh1ve8bs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/proyecto/consultar/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proyecto",
+								"consultar",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update project",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg2MDY3Njd9.iftnkGy9Xoc7XbQBL48kFBX3EVniV5uf0OMToBlGEuA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Proyecto 4\",\n    \"description\": \"Este es un resumen del proyecto 4\",\n    \"project_manager\": \"5fd69d2344624e882d352275\",\n    \"area\": \"5fdfa2408e40be8638fddc8d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/proyecto/actualizar/5fe00f5af98453a036fcf486/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proyecto",
+								"actualizar",
+								"5fe00f5af98453a036fcf486",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload docs Gantt",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg2MDY3Njd9.iftnkGy9Xoc7XbQBL48kFBX3EVniV5uf0OMToBlGEuA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Gantt",
+									"type": "file",
+									"src": "Bx8Ecwzc9/Gantt.xltx"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/proyecto/gantt/5fe3fea0a4e78b67fec5c466/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proyecto",
+								"gantt",
+								"5fe3fea0a4e78b67fec5c466",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list document by project",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg2MDY3Njd9.iftnkGy9Xoc7XbQBL48kFBX3EVniV5uf0OMToBlGEuA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/proyecto/consultar/gantt/5fe3fea0a4e78b67fec5c466/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proyecto",
+								"consultar",
+								"gantt",
+								"5fe3fea0a4e78b67fec5c466",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete document",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg2MDY3Njd9.iftnkGy9Xoc7XbQBL48kFBX3EVniV5uf0OMToBlGEuA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Gantt.xltx\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/proyecto/eliminar/gantt/5fe3fea0a4e78b67fec5c466/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"proyecto",
+								"eliminar",
+								"gantt",
+								"5fe3fea0a4e78b67fec5c466",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "application",
+			"item": [
+				{
+					"name": "process",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg2MDY3Njd9.iftnkGy9Xoc7XbQBL48kFBX3EVniV5uf0OMToBlGEuA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project\": \"5fe3fea0a4e78b67fec5c466\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/postulacion/ingreso/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"postulacion",
+								"ingreso",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "process Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg2MDY3Njd9.iftnkGy9Xoc7XbQBL48kFBX3EVniV5uf0OMToBlGEuA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/postulacion/condicion/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"postulacion",
+								"condicion",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resolution application",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ2OWQyMzQ0NjI0ZTg4MmQzNTIyNzUiLCJpYXQiOjE2MDg4NzA0MzB9.zv9utZMPlY6IGufPh-awbtkh1I16svhOuI1IEKFqNys",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"condition\": \"Aceptado\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/postulacion/5fe565b00264a0960e096ab6/condicion/5fd69d2344624e882d352275",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"postulacion",
+								"5fe565b00264a0960e096ab6",
+								"condicion",
+								"5fd69d2344624e882d352275"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
