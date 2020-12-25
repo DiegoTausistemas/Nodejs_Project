@@ -1,17 +1,20 @@
 const User = require("../models/user");
+const Project = require("../models/project");
 
 // Buscar usuarios por _id
 exports.userId = (req, res, next, id) => {
-  User.findById(id).exec((err, user) => {
-    if (err || !user) {
-      return res.status(400).json({
-        error: 'Usuario no encontrado'
-      });
-    }
-    req.profile = user;
-    next();
-  });
+  User.findById(id).exec()
+    .then(user => {
+      if (!user) {
+        return res.status(400).send({ message: "Error!" });
+      }
+      req.profile = user;
+      next();
+    }).catch(
+      error => res.status(500).send({ message: "Error!!" })
+    );
 };
+
 
 // Consulta de usuarios registrados (admin y regulares)
 exports.consultarUsuarios = (req, res) => {
@@ -51,4 +54,14 @@ exports.actualizarUsuario = (req, res) => {
     user.hashedpass = undefined;
     res.json(user);
   });
+};
+
+// Consulta de proyectos por usuario
+exports.ProyByUser = (req, res) => {
+  Project.find({ project_manager: req.profile._id })
+    .then(
+      proyecto => res.status(201).send({ proyecto })
+    ).catch(
+      error => res.status(500).send({ message: "Error" })
+    );
 };

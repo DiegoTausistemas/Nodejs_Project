@@ -1,18 +1,19 @@
 // Middleware para contexto de area
 const Area = require("../models/area");
 
-// Busqueda de area por Id
+// Busqueda de area por _id
 exports.areaId = (req, res, next, id) => {
-  Area.findById(id).exec((err, area) => {
-    if (err || !area) {
-      return res.status(400).json({
-        error: 'Area no encontrada'
-      });
-    }
-    req.area = area;
-    next();
-  });
-}
+  Area.findById(id).exec()
+    .then(area => {
+      if (!area) {
+        return res.status(400).send({ message: "Error!" });
+      }
+      req.area = area;
+      next();
+    }).catch(
+      error => res.status(500).send({ message: "Error!!" })
+    );
+};
 
 // Ingresar areas de proyectos
 exports.ingrearArea = (req, res) => {
