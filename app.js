@@ -28,9 +28,9 @@ app.use(cors());
 const authR = require("./routes/auth");
 const areaR = require("./routes/area");
 const userR = require("./routes/user");
-// const projectR = require("./routes/project");
-// const incubationR = require("./routes/incubation");
-// const applicationR = require("./routes/application");
+const projectR = require("./routes/project");
+const incubationR = require("./routes/incubation");
+const applicationR = require("./routes/application");
 
 // Definiciones de Swagger
 const swaggerOptions = {
@@ -73,9 +73,9 @@ app.use('/api/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use("/api", authR);
 app.use("/api", areaR);
 app.use("/api", userR);
-// app.use("/api", projectR);
-// app.use("/api", incubationR);
-// app.use("/api", applicationR);
+app.use("/api", projectR);
+app.use("/api", incubationR);
+app.use("/api", applicationR);
 
 // Puerto
 const port = process.env.PORT || 8001;
