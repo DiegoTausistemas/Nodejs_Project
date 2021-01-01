@@ -2,6 +2,7 @@ const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 const expressJwt = require("express-jwt");
 const bcrypt = require("bcrypt");
+const createError = require('http-errors');
 
 // Registro
 exports.signup = (req, res) => {
@@ -55,21 +56,6 @@ exports.signout = (req, res) => {
   res.json({ message: "Sesión Cerrada" });
 };
 
-// Token de seguridad
-exports.requireSignin = expressJwt({
-  secret: process.env.JWT_KEY,
-  userProperty: "auth"
-});
-
-// Auntenticación
-exports.Auth = (req, res, next) => {
-  let user = req.profile && req.auth && req.profile._id == req.auth._id;
-  if (!user) {
-    return res.status(403).send({ message: "¡Acceso Denegado!" });
-  }
-  next();
-};
-
 // Comprobación si usuario es Admin
 exports.Admin = (req, res, next) => {
   if (req.profile.role != "admin") {
@@ -77,3 +63,24 @@ exports.Admin = (req, res, next) => {
   }
   next();
 };
+
+// Verificación de token de seguridad
+exports.isAuth = async (req, res, next) => {
+  try {
+    const token = req.header('Authorization').replace('Bearer ', '')
+    const data = jwt.verify(token, process.env.JWT_KEY)
+    try {
+      const user = await User.findOne({ _id: data._id })
+      if (!user) {
+        throw new Error()
+      }
+      req.user = user
+      req.token = token
+      next()
+    } catch (error) {
+      res.status(401).send({ error: 'Acceso no autorizado' })
+    }
+  } catch {
+    res.status(401).send({ error: "¡Error en el acceso!" })
+  }
+}
