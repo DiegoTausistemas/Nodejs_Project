@@ -4,13 +4,13 @@ const router = express.Router();
 // Servicios
 const { userId } = require("../controllers/user")
 const { areaId, ingrearArea, consultarArea, actualizarArea, eliminarArea } = require("../controllers/area");
-const { requireSignin, Auth, Admin } = require("../controllers/auth");
+const { Admin, isAuth } = require("../controllers/auth");
 
 // Rutas
-router.post("/area/ingresar/:userId", requireSignin, Auth, Admin, ingrearArea);
+router.post("/area/ingresar/:userId", isAuth, Admin, ingrearArea);
 router.get("/area/consultar", consultarArea);
-router.put("/area/actualizar/:areaId/:userId", requireSignin, Auth, Admin, actualizarArea);
-router.delete("/area/eliminar/:areaId/:userId", requireSignin, Auth, Admin, eliminarArea);
+router.put("/area/actualizar/:areaId/:userId", isAuth, Admin, actualizarArea);
+router.delete("/area/eliminar/:areaId/:userId", isAuth, Admin, eliminarArea);
 
 // Parametros
 router.param("areaId", areaId);
