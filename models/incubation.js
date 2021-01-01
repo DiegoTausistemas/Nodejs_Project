@@ -16,9 +16,6 @@ const incubationSchema = new mongoose.Schema(
       type: String,
       maxlength: 150
     },
-    date_admission: {
-      type: Date
-    },
     course: {
       budget: {
         type: Number,
@@ -26,8 +23,8 @@ const incubationSchema = new mongoose.Schema(
       },
       stage: {
         type: String,
-        default: "Checkin",
-        enum: ["Checkin", "Escalamiento", "Piloto", "Prototipo"]
+        default: "desarrollo",
+        enum: ["desarrollo", "Prototipo", "Escalamiento", "Distribución"]
       }
     },
   },

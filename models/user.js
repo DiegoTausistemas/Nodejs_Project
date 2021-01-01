@@ -19,7 +19,8 @@ const userSchema = new mongoose.Schema(
       type: String,
       require: true,
       trim: true,
-      unique: true
+      unique: true,
+      lowercase: true,
     },
     hashedpass: {             //Encriptar pwd en DB
       type: String,
