@@ -9,6 +9,9 @@ Plataforma de postulación y seguimiento de incubación de proyectos
 Un usuario realiza el ingreso de un proyecto que busca ser financiado (Incubación). Dicho proyecto pasa a fase de postulación, el cual tras ser aprovado pasa a ser incubado, donde en diferentes etapas se le asigna un presupuesto y metas asociadas hasta su lanzamiento.
 
 
+> ## Notas
+Al realizar el primer inicio del sistema, se creara de forma automática una carpeta en el sistema llamada ```gant``` en la cual se almacenan los archivos subidos por los usuarios.
+
 ### 🏠 [Github](https://github.com/DiegoTausistemas/Nodejs_Project#readme)
 ### 📄 [Swagger](http://localhost:8000/api/api-docs/)
 
